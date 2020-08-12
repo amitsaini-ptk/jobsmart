@@ -50,18 +50,17 @@ body {
 
 <style>
 p.ex1 {
-  border: 1px solid red; 
-  padding: 35px 70px;
+  border: 2px solid red; 
+  padding: 40px 60px;
 }
 
-
-* {
+ {
   box-sizing: border-box;
 }
 
 .header {
-  border: 1px solid red;
-  padding: 15px;
+  border: 2px solid red;
+  padding: 20px;
 }
 
 .menu {
@@ -96,7 +95,7 @@ p.ex1 {
     {% for i in opening %}
 			<div class="header">
   		      <p><h4> INDUSTRY  :-{{ i.Industry}}   &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp   STATE  :-{{ i.State }}  &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp  LOCATION :-{{ i.Location }} </h4></p>
-		    </div>
+		  </div>
 		    <div class="menu">
   			  <ul>
     			<li>DEPARTMENT  :-{{ i.Department }} </li>
@@ -107,17 +106,13 @@ p.ex1 {
     			<li>SALARY BUDGET:- {{ i.Budget }}</li>
     		  </ul>
 		    </div>		
-		    
+		       <br>
 		       <div class="main">
                  <center> <button>   JOB  DESCRIPTION </button> </center> 
-  		       <p>{{ i.DetailJD }}</p>
-
-                </div>   
-
-             </div>
-  
-  		</p>
-    {% endfor %} 
+  		           <p>{{ i.DetailJD }}</p>
+           </div> 
+    {% endfor %}       
+   </div>
 </div>
 
        
