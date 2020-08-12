@@ -2,8 +2,8 @@ from django.db import models
 # Create your models here.
 
 
-
 GENDER_CHOICES = (('Male', 'Male'),('Female', 'Female') )
+
 CAND_CHOICES = (('FRESHER', 'FRESHER'),('EXPERIENCED', 'EXPERIENCED') )
 
 STATE_CHOICES=(('Andhra Pradesh', 'Andhra Pradesh'),('Arunachal Pradesh', 'Arunachal Pradesh'),('Assam', 'Assam'),('Bihar', 'Bihar'),('Chandigarh', 'Chandigarh'),('Chhattisgarh', 'Chhattisgarh'),('Delhi', 'Delhi'),('Goa','Goa'),('Gujarat','Gujarat'),('Haryana','Haryana'),('Himachal Pradesh', 'Himachal Pradesh'),('Jammu & Kashmir', 'Jammu & Kashmir'),('Jharkhand', 'Jharkhand'),('Karnataka', 'Karnataka'),('Kerala', 'Kerala'),('Madhya Pradesh', 'Madhya Pradesh'),('Maharashtra', 'Maharashtra'),('Manipur','Manipur'),('Meghalaya','Meghalaya'),('Mizoram','Mizoram'),('Nagaland','Nagaland'),('Orissa', 'Orissa'),('Puducherry','Puducherry'),('Punjab','Punjab'),('Rajasthan','Rajasthan'),('Sikkim','Sikkim') )
