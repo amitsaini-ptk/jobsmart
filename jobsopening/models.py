@@ -6,7 +6,7 @@ GENDER_CHOICES = (('Male', 'Male'),('Female', 'Female') )
 
 CAND_CHOICES = (('FRESHER', 'FRESHER'),('EXPERIENCED', 'EXPERIENCED') )
 
-STATE_CHOICES=(('Andhra Pradesh', 'Andhra Pradesh'),('Arunachal Pradesh', 'Arunachal Pradesh'),('Assam', 'Assam'),('Bihar', 'Bihar'),('Chandigarh', 'Chandigarh'),('Chhattisgarh', 'Chhattisgarh'),('Delhi', 'Delhi'),('Goa','Goa'),('Gujarat','Gujarat'),('Haryana','Haryana'),('Himachal Pradesh', 'Himachal Pradesh'),('Jammu & Kashmir', 'Jammu & Kashmir'),('Jharkhand', 'Jharkhand'),('Karnataka', 'Karnataka'),('Kerala', 'Kerala'),('Madhya Pradesh', 'Madhya Pradesh'),('Maharashtra', 'Maharashtra'),('Manipur','Manipur'),('Meghalaya','Meghalaya'),('Mizoram','Mizoram'),('Nagaland','Nagaland'),('Orissa', 'Orissa'),('Puducherry','Puducherry'),('Punjab','Punjab'),('Rajasthan','Rajasthan'),('Sikkim','Sikkim') )
+STATE_CHOICES=(('Andhra Pradesh', 'Andhra Pradesh'),('Arunachal Pradesh', 'Arunachal Pradesh'),('Assam', 'Assam'),('Bihar', 'Bihar'),('Chandigarh', 'Chandigarh'),('Chhattisgarh', 'Chhattisgarh'),('Delhi', 'Delhi'),('Goa','Goa'),('Gujarat','Gujarat'),('Haryana','Haryana'),('Himachal Pradesh', 'Himachal Pradesh'),('Jammu & Kashmir', 'Jammu & Kashmir'),('Jharkhand', 'Jharkhand'),('Karnataka', 'Karnataka'),('Kerala', 'Kerala'),('Madhya Pradesh', 'Madhya Pradesh'),('Maharashtra', 'Maharashtra'),('Manipur','Manipur'),('Meghalaya','Meghalaya'),('Mizoram','Mizoram'),('Nagaland','Nagaland'),('Orissa', 'Orissa'),('Puducherry','Puducherry'),('Punjab','Punjab'),('Rajasthan','Rajasthan'),('Sikkim','Sikkim'),('Uttar Pradesh','Uttar Pradesh'),('Tamil Naidu','Tamil Naidu'))
 
 DEPT_CHOICES=(('ADMIN', 'ADMIN'),('HUMAN RESOURCES', 'HUMAN RESOURCES'),('ACCOUNTS', 'ACCOUNTS'),('INFORMATION TECHNOLOGY', 'INFORMATION TECHNOLOGY'),('PURCHASE', 'PURCHASE'),('PRODUCTION', 'PRODUCTION'),('SALE & MKT', 'SALE & MKT'),('WHARE HOUSE', 'WHARE HOUSE'),('TIME OFFICE','TIME OFFICE'),('SECURITY', 'SECURITY'),('MAINTENANCE', 'MAINTENANCE'),('OTHERS', 'OTHERS') )
 
@@ -18,6 +18,7 @@ class opening(models.Model):
 	Location=models.CharField(default=0,max_length=100)
 	State= models.CharField(default=0,choices=STATE_CHOICES, max_length=100)
 	Department= models.CharField(default=0,choices=DEPT_CHOICES, max_length=50)
+	Qualification=models.CharField(default=0,max_length=100)
 	Designation = models.CharField(default=0,choices=DESIG_CHOICES, max_length=50)
 	Ctype = models.CharField(default=0,choices=CAND_CHOICES, max_length=50)
 	Gender = models.CharField(default=0,choices=GENDER_CHOICES, max_length=50)
