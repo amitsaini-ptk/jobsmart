@@ -79,6 +79,26 @@ p.ex1 {
 
 
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 15px;
+}
+
+.item5 {
+  grid-area: 2 / 2 / 8 / 4;
+}
+
+
 </style>
 
 
@@ -87,33 +107,34 @@ p.ex1 {
 <div class="sidenav">
   <a href="/copening">Current Openings</a>
   <a href="#">JOB Festivals</a>
-  <a href="#">Consultants</a>
+  <a href="#">Deligates</a>
+  <a href="#">HOT Openings</a>
 </div>
 
-
 <div class="content">
-    {% for i in opening %}
-			<div class="header">
-  		      <p><h4> INDUSTRY  :-{{ i.Industry}}   &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp   STATE  :-{{ i.State }}  &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp  LOCATION :-{{ i.Location }} </h4></p>
-		  </div> 
-		    <div class="menu">
-  			  <ul>
-    			<li>DEPARTMENT  :-{{ i.Department }} </li>
-    			<li>DESIGNATION:-{{ i.Designation }}</li>
-          <li>QUALIFICATION:-{{ i.Qualification }}</li>
-    			<li>CANDIDATE TYPE  :-{{ i.Ctype }}</li>
-    			<li>GENDER:-{{ i.Gender }} </li>
-    			<li>MINIMUN EXPERIENCE :-{{ i.Minexp }}</li>
-    			<li>SALARY BUDGET:- {{ i.Budget }}</li>
-    		  </ul>
-		    </div>		
-		       <br>
-		       <div class="main">
-                 <center> <button>   JOB  DESCRIPTION </button> </center> 
-  		           <p>{{ i.DetailJD }}</p>
-           </div>       
-    {% endfor %}       
-   </div>
+  <center> <h1> The Current Opening in detail with Job Description. </center>
+
+  
+  {% for i in opening %}
+    <div> <center>  <h3> JOB CODE-{key}   </h3>        </center> </div>
+    <div class="grid-container"> 
+      <div class="item1">INDUSTRY  :-{{ i.Industry}}</div>
+      <div class="item2">DEPARTMENT  :-{{ i.Department }}</div>
+      <div class="item3">STATE  :-{{ i.State }} | LOCATION :-{{ i.Location }}</div>
+
+      <div class="item4">DESIGNATION:-{{ i.Designation }}</div>
+      <div class="item5"><center> <button>   JOB  DESCRIPTION </button> </center> 
+                 <p>{{ i.DetailJD }}</p>
+      </div>           
+      <div class="item6">QUALIFICATION:-{{ i.Qualification }}</div>
+
+      <div class="item7">CANDIDATE :-{{ i.Ctype }}</div>
+      <div class="item8">GENDER:-{{ i.Gender }}</div>
+      <div class="item9">MIN EXPERIENCE :-{{ i.Minexp }}</div>  
+      <div class="item10">SALARY BUDGET:- {{ i.Budget }}</div>
+    </div>   
+  {% endfor %}  
+   
 </div>
 
        
