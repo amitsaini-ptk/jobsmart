@@ -17,13 +17,16 @@ Including another URLconf
 from django.contrib import admin
 
 from django.urls import path
-from jobsopening import views
+from deligates.views import jdeligate
+from jobsopening.views import jopening,Home
+
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Home),
-    path('copening/',views.jopening),
+    path('',Home),
+    path('copening/',jopening),
+    path('deligate/',jdeligate),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
