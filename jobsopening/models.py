@@ -1,6 +1,8 @@
 from django.db import models
 # Create your models here.
 
+from deligates.models import deligate
+
 
 GENDER_CHOICES = (('Male', 'Male'),('Female', 'Female') )
 
@@ -14,6 +16,8 @@ DESIG_CHOICES=(('CEO', 'CEO'),('GENERAL MANAGER', 'GENERAL MANAGER'),('HOD', 'HO
 EXP_CHOICES=(('FRESHER', 'FRESHER'),('0-2 YEARS', '0-2 YEARS'),('2-5 YEARS', '2-5 YEARS'),('5-7 YEARS', '5-7 YEARS'),('7-10', '7-10 YEARS'),('10-12 YEARS', '10-12 YEARS'),('12-15 YEARS', '12-15 YEARS'),('15-20 YEARS', '15-20 YEARS'),('20 YEARS', '20 YEARS') )
 
 class opening(models.Model):
+	Deligate=models.ForeignKey(deligate,null=True,blank=True,on_delete=models.SET_NULL)
+
 	Regno = models.CharField(default=0,max_length=100)
 	Industry = models.CharField(default=0,max_length=100)
 	Location=models.CharField(default=0,max_length=100)

@@ -107,7 +107,7 @@ p.ex1 {
 <div class="sidenav">
   <a href="/copening">Current Openings</a>
   <a href="#">JOB Festivals</a>
-  <a href="#">Deligates</a>
+  <a href="/deligate">Deligates</a>
   <a href="#">HOT Openings</a>
 </div>
 
@@ -116,7 +116,7 @@ p.ex1 {
 
   
   {% for i in opening %}
-    <div> <center>  <h3> JOB CODE-{key}   </h3>        </center> </div>
+    <div> <center>  <h3> JOB CODE-{{i.Deligate.Regno}}/{{i.id}}   </h3>        </center> </div>
     <div class="grid-container"> 
       <div class="item1">INDUSTRY  :-{{ i.Industry}}</div>
       <div class="item2">DEPARTMENT  :-{{ i.Department }}</div>
