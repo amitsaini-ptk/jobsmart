@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from deligates.views import jdeligate
 from jobsopening.views import jopening,Home
-
+from hotopening.views import htopening
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,4 +29,5 @@ urlpatterns = [
     path('',Home),
     path('copening/',jopening),
     path('deligate/',jdeligate),
+    path('hotopening/',htopening),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

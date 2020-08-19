@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobsopening.apps.JobsopeningConfig',
     'deligates.apps.DeligatesConfig',
+    'hotopening.apps.HotopeningConfig',
 ]
 
 MIDDLEWARE = [

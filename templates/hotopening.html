@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>SSWA - CURRENT OPENINGS</title>
+<title>SSWA -HOT OPENINGS</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -111,28 +111,28 @@ p.ex1 {
   <a href="/hotopening">HOT Openings</a>
 </div>
 
-
 <div class="content">
-  <center> <h1> The Current Opening in detail with Job Description. </center>
+  <center> <h1> The HOT Openings for Candifates who to work overseas  </center>
 
   
-  {% for i in opening %}
-    <div> <center>  <h3> JOB CODE-{{i.Deligate.Regno}}/{{i.id}}   </h3>        </center> </div>
+  {% for k in opening %}
+    <div> <center>  <h3> JOB CODE-{{k.Deligate.Regno}}/{{k.id}}   </h3>        </center> </div>
     <div class="grid-container"> 
-      <div class="item1">INDUSTRY  :-{{ i.Industry}}</div>
-      <div class="item2">DEPARTMENT  :-{{ i.Department }}</div>
-      <div class="item3">STATE  :-{{ i.State }} | LOCATION :-{{ i.Location }}</div>
+      <div class="item1">INDUSTRY  :-{{ k.Industry}}</div>
+      <div class="item2">CONTINENT :-{{ k.Continent }}</div>
+      <div class="item3">COUNTRY   :-{{ k.Country }} | PROVINCE :-{{ k.Province }}</div>
 
-      <div class="item4">DESIGNATION:-{{ i.Designation }}</div>
+      <div class="item4">DEPARTMENT:-{{ k.Department}}</div>
+      <div class="item4">DESIGNATION:-{{ k.Designation }}</div>
       <div class="item5"><center> <button>   JOB  DESCRIPTION </button> </center> 
-                 <p>{{ i.DetailJD }}</p>
+                 <p>{{ k.DetailJD }}</p>
       </div>           
-      <div class="item6">QUALIFICATION:-{{ i.Qualification }}</div>
+      <div class="item6">QUALIFICATION:-{{ k.Qualification }}</div>
 
-      <div class="item7">CANDIDATE :-{{ i.Ctype }}</div>
-      <div class="item8">GENDER:-{{ i.Gender }}</div>
-      <div class="item9">MIN EXPERIENCE :-{{ i.Minexp }}</div>  
-      <div class="item10">SALARY BUDGET:- {{ i.Budget }}</div>
+      <div class="item7">CANDIDATE :-{{ k.Ctype }}</div>
+      <div class="item8">GENDER:-{{ k.Gender }}</div>
+      <div class="item9">MIN EXPERIENCE :-{{ k.Minexp }}</div>  
+      <div class="item10">SALARY BUDGET:- {{ k.Budget }}</div>
     </div>   
   {% endfor %}  
    
@@ -143,3 +143,8 @@ p.ex1 {
 <body>
 </body>
 </html>
+
+
+
+ 
+  
