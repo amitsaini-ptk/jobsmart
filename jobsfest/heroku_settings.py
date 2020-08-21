@@ -38,4 +38,4 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 
-ALLOWED_HOSTS = ['herokujobsmart.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['herokujobsmart.herokuapp.com','127.0.0.1','jobsfest.sswa.in']

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'jobsopening.apps.JobsopeningConfig',
     'deligates.apps.DeligatesConfig',
     'hotopening.apps.HotopeningConfig',
+    'Jobadd.apps.JobaddConfig',
 ]
 
 MIDDLEWARE = [
