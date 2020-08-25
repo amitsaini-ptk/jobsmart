@@ -81,7 +81,7 @@ p.ex1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto ;
   grid-gap: 5px;
   background-color: #2196F3;
   padding: 5px;
@@ -94,8 +94,8 @@ p.ex1 {
   font-size: 15px;
 }
 
-.item5 {
-  grid-area: 2 / 2 / 3 / 3;
+.item3 {
+  grid-area: 2 / 1 / 4 / 3;
 }
 
 
@@ -113,21 +113,19 @@ p.ex1 {
 
 
 <div class="content">
-  <center> <h1> The Current Opening in detail with Job Description. </center>
+  <center> <h1> The JOB FEST -Provide the jobs information in the Digital/ Social Media/ New Papers and Electromnics Source etc</center>
 
   
   {% for j in jobadd %}
     
     <div class="grid-container"> 
       <div class="item1">MODE :-{{ j.Mode}}</div>
-      <div class="item2">DATE  :-{{ j.Date }}</div>
+      <div class="item2">SOURCE:-{{ j.Descrption }}</div>
       
-      <div class="item3"><center> <button>   JOB  DESCRIPTION </button> </center> 
+      <div class="item3"><center> <button>  {{ j.Date }}</button> </center> 
            <p> <img width="500px" src="/uploads/{{.Img}}"> </p>
 
       </div>           
-      <div class="item4">SOURCE:-{{ j.Descrption }}</div>
-
     </div>   
   {% endfor %}  
    
