@@ -95,7 +95,7 @@ p.ex1 {
 }
 
 .item5 {
-  grid-area: 2 / 2 / 8 / 4;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 
@@ -116,23 +116,18 @@ p.ex1 {
   <center> <h1> The Current Opening in detail with Job Description. </center>
 
   
-  {% for i in opening %}
-    <div> <center>  <h3> JOB CODE-{{i.Deligate.Regno}}/{{i.id}}   </h3>        </center> </div>
+  {% for j in jobadd %}
+    
     <div class="grid-container"> 
-      <div class="item1">INDUSTRY  :-{{ i.Industry}}</div>
-      <div class="item2">DEPARTMENT  :-{{ i.Department }}</div>
-      <div class="item3">STATE  :-{{ i.State }} | LOCATION :-{{ i.Location }}</div>
+      <div class="item1">MODE :-{{ j.Mode}}</div>
+      <div class="item2">DATE  :-{{ j.Date }}</div>
+      
+      <div class="item3"><center> <button>   JOB  DESCRIPTION </button> </center> 
+           <p> <img width="500px" src="/uploads/{{.Img}}"> </p>
 
-      <div class="item4">DESIGNATION:-{{ i.Designation }}</div>
-      <div class="item5"><center> <button>   JOB  DESCRIPTION </button> </center> 
-                 <p>{{ i.DetailJD }}</p>
       </div>           
-      <div class="item6">QUALIFICATION:-{{ i.Qualification }}</div>
+      <div class="item4">SOURCE:-{{ j.Descrption }}</div>
 
-      <div class="item7">CANDIDATE :-{{ i.Ctype }}</div>
-      <div class="item8">GENDER:-{{ i.Gender }}</div>
-      <div class="item9">MIN EXPERIENCE :-{{ i.Minexp }}</div>  
-      <div class="item10">SALARY BUDGET:- {{ i.Budget }}</div>
     </div>   
   {% endfor %}  
    

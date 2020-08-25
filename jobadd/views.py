@@ -1,10 +1,12 @@
 from django.shortcuts import render
 
+from jobadd.models import add
+
 def jobadd(request):
 	
 	obj = add.objects.all()
 	
-	return render(request,'jobfest.html', {'add':obj})
+	return render(request,'jobadd.html', {'jobadd':obj})
 # Create your views here.
 
 

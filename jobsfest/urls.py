@@ -33,5 +33,5 @@ urlpatterns = [
     path('copening/',jopening),
     path('deligate/',jdeligate),
     path('hotopening/',htopening),
-    path('jobfest/',jobadd),
+    path('jobadd/',jobadd),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
