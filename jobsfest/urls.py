@@ -34,4 +34,4 @@ urlpatterns = [
     path('deligate/',jdeligate),
     path('hotopening/',htopening),
     path('jobadd/',jobadd),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
