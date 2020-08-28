@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'deligates.apps.DeligatesConfig',
     'hotopening.apps.HotopeningConfig',
     'jobadd.apps.JobaddConfig',
-    'cloudinary_storage',
-    'django.contrib.staticfiles',
-    'cloudinary',
+    # 'cloudinary_storage',
+    # 'django.contrib.staticfiles',
+    # 'cloudinary',
 ]
 
 MIDDLEWARE = [
