@@ -37,5 +37,13 @@ import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hzbmo73vu',
+    'API_KEY': '747368479237662',
+    'API_SECRET': 'OwqrfC7KSP_t8vyeopW22xVB9j4'
+}
+
 
 ALLOWED_HOSTS = ['herokujobsmart.herokuapp.com','127.0.0.1','jobs.sswa.in']
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
