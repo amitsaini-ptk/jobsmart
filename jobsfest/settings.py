@@ -37,14 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'jobsopening.apps.JobsopeningConfig',
     'deligates.apps.DeligatesConfig',
     'hotopening.apps.HotopeningConfig',
     'jobadd.apps.JobaddConfig',
-    # 'cloudinary_storage',
-    # 'django.contrib.staticfiles',
-    # 'cloudinary',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
