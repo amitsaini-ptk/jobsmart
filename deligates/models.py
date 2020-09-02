@@ -9,7 +9,7 @@ class deligate(models.Model):
 	City=models.CharField(default=0,max_length=100)
 	Pincode=models.IntegerField()
 	State= models.CharField(default=0,choices=STATE_CHOICES, max_length=100)
-	Mobno= models.IntegerField()
+	Mobno= models.CharField(default=0,max_length=15)
 	Mailid=models.CharField(default=0,max_length=100)
 	
 	
